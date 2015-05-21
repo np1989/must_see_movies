@@ -11,7 +11,7 @@
           <div class="col-md-12">
             <dl class="dl-horizontal">
               <dt>Director</dt>
-              <dd><%= @directors.find_by({:id => @movie.director_id}).name %></dd>
+              <dd><%= @movie.director.name %></dd>
 
               <div>
                 <dt>Image</dt>

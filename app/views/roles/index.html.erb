@@ -28,10 +28,10 @@
           <dd><%= role.id %></dd>
 
           <dt>Actor</dt>
-          <dd><%= @actors.find_by({:id => role.actor_id}).name %></dd>
+          <dd><%= role.actor.name %></dd>
 
           <dt>Movie</dt>
-          <dd><%= @movies.find_by({:id => role.movie_id}).title %></dd>
+          <dd><%= role.movie.title %></dd>
 
         </dl>
         <div class="btn-group btn-group-justified">
