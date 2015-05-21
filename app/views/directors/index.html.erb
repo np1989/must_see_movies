@@ -20,21 +20,21 @@
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Director #<%= director.id %></h3>
+        <h3 class="panel-title"><%= director.name %></h3>
       </div>
       <div class="panel-body">
         <dl>
-          <dt>Image url</dt>
-          <dd><%= director.image_url %></dd>
+          <dt>Image</dt>
+          <img src = <%= director.image_url %>>
 
           <dt>Bio</dt>
           <dd><%= director.bio %></dd>
 
-          <dt>Dob</dt>
+          <dt>DOB</dt>
           <dd><%= director.dob %></dd>
 
-          <dt>Name</dt>
-          <dd><%= director.name %></dd>
+          <dt>Director ID#</dt>
+          <dd><%= director.id %></dd>
 
         </dl>
         <div class="btn-group btn-group-justified">

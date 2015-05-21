@@ -1,10 +1,17 @@
 class RolesController < ApplicationController
   def index
     @roles = Role.all
+    @actors = Actor.all
+    @movies = Movie.all
+
+
   end
 
   def show
     @role = Role.find(params[:id])
+    @actors = Actor.all
+    @movies = Movie.all
+
   end
 
   def new

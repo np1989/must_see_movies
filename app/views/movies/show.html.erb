@@ -11,23 +11,25 @@
           <div class="col-md-12">
             <dl class="dl-horizontal">
               <dt>Director</dt>
-              <dd><%= @movie.director_id %></dd>
+              <dd><%= @directors.find_by({:id => @movie.director_id}).name %></dd>
 
-              <dt>Image url</dt>
-              <dd><%= @movie.image_url %></dd>
+              <div>
+                <dt>Image</dt>
+                <img src =  <%= @movie.image_url %>>
+              </div>
+              <div>
+                <dt>Description</dt>
+                <dd><%= @movie.description %></dd>
 
-              <dt>Description</dt>
-              <dd><%= @movie.description %></dd>
+                <dt>Duration</dt>
+                <dd><%= @movie.duration %></dd>
 
-              <dt>Duration</dt>
-              <dd><%= @movie.duration %></dd>
+                <dt>Year</dt>
+                <dd><%= @movie.year %></dd>
 
-              <dt>Year</dt>
-              <dd><%= @movie.year %></dd>
-
-              <dt>Title</dt>
-              <dd><%= @movie.title %></dd>
-
+                <dt>Title</dt>
+                <dd><%= @movie.title %></dd>
+              </div>
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/movies" class="btn btn-primary">

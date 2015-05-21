@@ -4,23 +4,24 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Director #<%= @director.id %></h3>
+        <h3 class="panel-title"><%= @director.name %></h3>
       </div>
       <div class="panel-body">
         <div class="row">
           <div class="col-md-12">
             <dl class="dl-horizontal">
-              <dt>Image url</dt>
-              <dd><%= @director.image_url %></dd>
-
+              <div>
+                <dt>Image</dt>
+                <img src = <%= @director.image_url %>>
+              </div>
               <dt>Bio</dt>
               <dd><%= @director.bio %></dd>
 
               <dt>Dob</dt>
               <dd><%= @director.dob %></dd>
 
-              <dt>Name</dt>
-              <dd><%= @director.name %></dd>
+              <dt>Director#</dt>
+              <dd><%= @director.id %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">

@@ -20,15 +20,15 @@
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Movie #<%= movie.id %></h3>
+        <h3 class="panel-title"><%= movie.title %></h3>
       </div>
       <div class="panel-body">
         <dl>
           <dt>Director</dt>
-          <dd><%= movie.director_id %></dd>
+          <dd><%= @directors.find_by({:id => movie.director_id}).name %></dd>
 
-          <dt>Image url</dt>
-          <dd><%= movie.image_url %></dd>
+          <dt>Image</dt>
+          <img src = <%= movie.image_url %>>
 
           <dt>Description</dt>
           <dd><%= movie.description %></dd>
@@ -39,8 +39,8 @@
           <dt>Year</dt>
           <dd><%= movie.year %></dd>
 
-          <dt>Title</dt>
-          <dd><%= movie.title %></dd>
+          <dt>Movie ID#</dt>
+          <dd><%= movie.id %></dd>
 
         </dl>
         <div class="btn-group btn-group-justified">

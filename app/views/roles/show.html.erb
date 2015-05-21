@@ -14,10 +14,10 @@
               <dd><%= @role.character_name %></dd>
 
               <dt>Actor</dt>
-              <dd><%= @role.actor_id %></dd>
+             <dd><%= @actors.find_by({:id => @role.actor_id}).name %></dd>
 
               <dt>Movie</dt>
-              <dd><%= @role.movie_id %></dd>
+          <dd><%= @movies.find_by({:id => @role.movie_id}).title %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
